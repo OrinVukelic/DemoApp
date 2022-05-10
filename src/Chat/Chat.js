@@ -5,7 +5,8 @@ import './Chat.scss';
 function Chat() {
 
   const newMess = () => {
-    let nmsg = {user: document.getElementById("usr").value, message: document.getElementById("box").value}
+    let nmsg = {user: document.getElementById("usr").value, message: document.getElementById("box").value};
+    nmsg.message = nmsg.message.replaceAll("\n","\\n");
     let xmlr = new XMLHttpRequest();
     xmlr.open("POST", "newmsg.php?usr=" + nmsg.user + "&msg=" + nmsg.message);
     xmlr.send();
@@ -20,6 +21,13 @@ function Chat() {
       if (xmlr.response !== mess) setMess(xmlr.response);
     }
     xmlr.send();
+  }
+
+  const checkEnter = (e) => {
+    if (!e.shiftKey && e.charCode === 13) {
+      e.preventDefault();
+      newMess();
+    }
   }
 
   const txtChange = () => {
@@ -63,7 +71,7 @@ function Chat() {
         <input type="textbox" id="usr" />
       </div>
       <div id="msgdiv">
-        <textarea id="box" rows="2" placeholder="Message" onChange={() => txtChange()} />
+        <textarea id="box" rows="2" placeholder="Message" onKeyPress={checkEnter} onChange={() => txtChange()} />
         <input id="send" type="submit" value="->" onClick={() => newMess()} />
       </div>
     </form>
