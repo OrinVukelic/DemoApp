@@ -1,0 +1,74 @@
+#chatbox {
+  width: 280px;
+  margin: auto;
+}
+
+#msgbox {
+  margin: auto;
+  width: 280px;
+  height: 320px;
+  overflow: auto;
+  border: solid 4px darkgray;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.message {
+  display: block;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding-top: 4px;
+  padding-left: 4px;
+  border: solid 2px gray;
+  border-radius: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 240px;
+  background-color: lightsteelblue;
+}
+
+.message .un {
+  margin: 2px;
+  font-weight: bold;
+  color: mediumblue;
+}
+
+.message .ms {
+  margin: 2px;
+  overflow-wrap: break-word;
+  color: black;
+}
+
+#usrdiv {
+  width: 280px;
+  height: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#usrdiv p {
+  display: inline-block;
+}
+
+#usr {
+  margin-left: 12px;
+  width: 128px;
+}
+
+#msgdiv {
+  width: 280px;
+  margin: auto;
+}
+
+#box {
+  width: 248px;
+  resize: none;
+}
+
+#send {
+  width: 32px;
+  margin-top: 0px;
+}
