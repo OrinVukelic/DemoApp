@@ -47,13 +47,13 @@ function CurrencyConvert() {
 
   return (
     <form id="cconvertbox" onSubmit={pSubmit}>
-      <input type="textbox" id="basev" onChange={() => waitForSubmit()} />
-      <CurrencyOption id="basec" onChange={() => waitForSubmit()} />
+      <input type="textbox" id="basev" onChange={waitForSubmit} />
+      <CurrencyOption id="basec" onChange={waitForSubmit} />
       <p>to</p>
       <textarea id="resultv" rows="1" placeholder="result" readOnly />
-      <CurrencyOption id="resultc" onChange={() => waitForSubmit()} />
+      <CurrencyOption id="resultc" onChange={waitForSubmit} />
       <br />
-      <input id="convertb" type="submit" value="Convert" onClick={() => valueConvert()} />
+      <input id="convertb" type="submit" value="Convert" onClick={valueConvert} />
       <br />
       <p>(Number of conversion requests is limited, please use this responsibly)</p>
     </form>

@@ -71,8 +71,8 @@ function Chat() {
         <input type="textbox" id="usr" />
       </div>
       <div id="msgdiv">
-        <textarea id="box" rows="2" placeholder="Message" onKeyPress={checkEnter} onChange={() => txtChange()} />
-        <input id="send" type="submit" value="->" onClick={() => newMess()} />
+        <textarea id="box" rows="2" placeholder="Message" onKeyPress={checkEnter} onChange={txtChange} />
+        <input id="send" type="submit" value="->" onClick={newMess} />
       </div>
     </form>
   );

@@ -1,5 +1,6 @@
 import Chat from '../Chat/Chat';
 import CurrencyConvert from '../CurrencyConvert/CurrencyConvert';
+import Drawing from '../Drawing/Drawing';
 
 function ToolFrame({state}) {
 
@@ -9,6 +10,9 @@ function ToolFrame({state}) {
       break;
     case "cconvert":
       return(<CurrencyConvert />);
+      break;
+    case "draw":
+      return(<Drawing />);
       break;
     default:
       return("");
