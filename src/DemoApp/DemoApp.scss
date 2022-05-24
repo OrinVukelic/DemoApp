@@ -4,6 +4,11 @@ html, div {
   background-color: gainsboro;
 }
 
+p, li {
+  font-family: "Arial";
+  font-size: 18px;
+}
+
 #title {
   padding-top: 16px;
   padding-bottom: 16px;
@@ -12,6 +17,10 @@ html, div {
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   font-family: "Lucida Console";
+}
+
+.ind {
+  text-indent: 40px;
 }
 
 #select {
@@ -40,8 +49,7 @@ html, div {
     background-color: rgb(32,32,32);
   }
 
-  p {
-    font-family: "Arial";
+  p, li {
     color: white;
   }
 
